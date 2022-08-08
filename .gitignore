@@ -1,0 +1,8 @@
+demo/
+config/
+src/
+static/
+.babelrc
+package-lock.json
+tsconfig.json
+pnpm-lock.yaml
