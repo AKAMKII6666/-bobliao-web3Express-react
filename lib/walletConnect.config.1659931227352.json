@@ -1,0 +1,20 @@
+{
+	"development": {
+		"rpc": {
+			"80001": "https://matic-mumbai.chainstacklabs.com/"
+		},
+		"chainId": 80001
+	},
+	"gray": {
+		"rpc": {
+			"80001": "https://matic-mumbai.chainstacklabs.com/"
+		},
+		"chainId": 80001
+	},
+	"production": {
+		"rpc": {
+			"80001": "https://matic-mumbai.chainstacklabs.com/"
+		},
+		"chainId": 80001
+	}
+}

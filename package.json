@@ -1,8 +1,13 @@
 {
-	"name": "webpack-react-ts-package",
+	"name": "@bobliao/Web3-Express-react",
 	"version": "1.0.0",
 	"description": "",
 	"main": "lib/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AKAMKII6666/-bobliao-web3Express-react.git"
+	},
+	"module": "lib/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "webpack-dev-server --config config/webpack.dev.config.js",

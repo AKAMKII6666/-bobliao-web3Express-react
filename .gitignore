@@ -6,3 +6,4 @@ static/
 package-lock.json
 tsconfig.json
 pnpm-lock.yaml
+node_modules
