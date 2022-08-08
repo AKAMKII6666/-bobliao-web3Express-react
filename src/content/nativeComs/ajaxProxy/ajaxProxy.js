@@ -1,5 +1,5 @@
-import defaultCgiConfig from "./cgiConfig/default.json";
 import { jQueryObject } from "@bobliao/use-jquery-hook";
+import defaultCgiConfig from "./cgiConfig/default.json";
 
 const $ = jQueryObject;
 

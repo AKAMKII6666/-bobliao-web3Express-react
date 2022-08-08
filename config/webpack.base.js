@@ -34,31 +34,17 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /(\.js(x?))|(\.ts(x?))$/,
+				test: /(\.js(x?))$|(\.ts(x?))$/,
 				exclude: /node_modules/,
 				loader: "babel-loader",
 			},
 			{
-				test: /\.(png|jpe?g|gif)$/i,
-				use: [
-					{
-						loader: "url-loader",
-						options: {
-							name: "[name]_[hash:6].[ext]",
-							esModule: false,
-							limit: 0,
-						},
-					},
-				],
-			},
-			{
-				test: /\.json$/,
-				loader: "file-loader",
-				type: "javascript/auto",
+				test: /\.(jpg|jpeg|gif|png|svg)$/,
+				loader: "url-loader",
 				options: {
-					name() {
-						return "[path][name]." + Version + ".[ext]";
-					},
+					name: "[path][name].[ext]?_v=" + Version,
+					limit: 10240,
+					esModule: false,
 				},
 			},
 		],

@@ -1,0 +1,1 @@
+module.exports = __webpack_public_path__ + "src/content/components/warn/icons/global.svg?_v=1659971971034";

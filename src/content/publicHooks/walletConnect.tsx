@@ -10,13 +10,13 @@ import useJquery, { jQueryObject, isRunningInServer } from "@bobliao/use-jquery-
 import { IstateResult, ResultStateus } from "./interfaces/iComon";
 const _web3Contract = require("web3-eth-contract");
 const _web3 = require("web3");
-const _wcConfig1 = require("/walletConnect.config.json");
+import _wcConfig1 from "./walletConnect.config.json";
 var _wcConfig = _wcConfig1;
-import fs from "fs";
 
+import fs from "fs";
 try {
 	const _wcConfig2 = fs.readFileSync("../../../walletConnect.config.json", "utf8");
-	debugger;
+
 	if (_wcConfig2 !== "undefined") {
 		_wcConfig = _wcConfig2;
 	}
@@ -116,6 +116,7 @@ const useWalletConnect = function (RUNNING_ENV: string): IuseWalletConnect {
 	const [web3Operator, setWeb3Operator] = useState<any>(null);
 	//目标配置
 	const currentConfig = _wcConfig[RUNNING_ENV];
+
 	//退出登陆的信号
 	const [dissconnectSignal, setDissconnectSignal] = useState<number>();
 
