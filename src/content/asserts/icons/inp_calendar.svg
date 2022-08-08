@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>date备份 2</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="表单" transform="translate(-675.000000, -525.000000)">
+            <g id="date备份-2" transform="translate(675.000000, 525.000000)">
+                <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+                <rect id="矩形" stroke-opacity="0.404185902" stroke="#11142D" stroke-width="1.5" x="0.75" y="3.75" width="18.5" height="15.5" rx="3"></rect>
+                <path d="M5.3232233,0.823223305 C5.56903559,0.75 5.63153559,0.777982203 5.6767767,0.823223305 C5.7220178,0.868464406 5.75,0.930964406 5.75,1 L5.75,1 L5.75,3.75 L5.25,3.75 L5.25,1 C5.25,0.930964406 5.2779822,0.868464406 5.3232233,0.823223305 Z" id="矩形" stroke-opacity="0.404185902" stroke="#11142D" stroke-width="1.5"></path>
+                <path d="M14.3232233,0.823223305 C14.5690356,0.75 14.6315356,0.777982203 14.6767767,0.823223305 C14.7220178,0.868464406 14.75,0.930964406 14.75,1 L14.75,1 L14.75,3.75 L14.25,3.75 L14.25,1 C14.25,0.930964406 14.2779822,0.868464406 14.3232233,0.823223305 Z" id="矩形备份" stroke-opacity="0.404185902" stroke="#11142D" stroke-width="1.5"></path>
+                <rect id="矩形" stroke-opacity="0.404185902" stroke="#11142D" stroke-width="1.5" x="0.75" y="7.75" width="18.5" height="1"></rect>
+                <circle id="椭圆形" fill-opacity="0.40285764" fill="#11142D" cx="5.5" cy="11" r="1"></circle>
+                <circle id="椭圆形备份-5" fill-opacity="0.40285764" fill="#11142D" cx="5.5" cy="15" r="1"></circle>
+                <circle id="椭圆形备份-3" fill-opacity="0.40285764" fill="#11142D" cx="10" cy="11" r="1"></circle>
+                <circle id="椭圆形备份-6" fill-opacity="0.40285764" fill="#11142D" cx="10" cy="15" r="1"></circle>
+                <circle id="椭圆形备份-4" fill-opacity="0.40285764" fill="#11142D" cx="14.5" cy="11" r="1"></circle>
+                <circle id="椭圆形备份-7" fill-opacity="0.40285764" fill="#11142D" cx="14.5" cy="15" r="1"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

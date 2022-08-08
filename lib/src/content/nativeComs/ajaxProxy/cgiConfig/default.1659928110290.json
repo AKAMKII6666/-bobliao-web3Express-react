@@ -1,0 +1,11 @@
+{
+	"cgiName": "aaaaa",
+	"devPort": "http://aaaa",
+	"grayPort": "https://test.aaa.net/acgi-his",
+	"proPort": "https://www.aaa.net/acgi-his",
+	"aaaa": {
+		"url": "aaaaa",
+		"method": "get",
+		"desc": ""
+	}
+}

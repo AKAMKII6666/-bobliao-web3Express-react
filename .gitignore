@@ -1,6 +1,5 @@
 demo/
 config/
-src/
 static/
 .babelrc
 package-lock.json

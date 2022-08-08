@@ -1,0 +1,29 @@
+.b-ballWindow.smartLay{
+    border:0px;
+    border-radius: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    width: 52.14285714285715rem /* 730px -> 52.14285714285715rem */;
+    background-color: #fff;
+
+    .b-title{
+        label{
+            margin: .71428571428571rem /* 10px -> .71428571428571rem */ .71428571428571rem /* 10px -> .71428571428571rem */;
+            width:.78571428571429rem /* 11px -> .78571428571429rem */;
+            height:.78571428571429rem /* 11px -> .78571428571429rem */;
+            background-size: contain;
+        }
+    }
+
+    .title-line{
+        line-height: 3rem /* 42px -> 3rem */;
+        margin-top:3.71428571428571rem /* 52px -> 3.71428571428571rem */;
+        font-size: 1.71428571428571rem /* 24px -> 1.71428571428571rem */;
+    }
+
+    .b-window-container{
+        padding: 1.42857142857143rem /* 20px -> 1.42857142857143rem */ 2.5rem /* 35px -> 2.5rem */;
+        font-size: 1.28571428571429rem /* 18px -> 1.28571428571429rem */;
+        color:#97979B;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}

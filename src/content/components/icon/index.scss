@@ -1,0 +1,141 @@
+.rrt-icon {
+    display: inline-block;
+    width: 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+    height: 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.rrt-icon.floatLeft {
+    float: left;
+}
+
+.rrt-icon.floatRight {
+    float: right;
+}
+
+.rrt-icon.icon-disk {
+    background-image: url(../../asserts/icons/inp_disk.svg);
+}
+
+.rrt-icon.icon-avator {
+    background-image: url(../../asserts/icons/inp_avator.svg);
+}
+
+.rrt-icon.icon-calendar {
+    background-image: url(../../asserts/icons/inp_calendar.svg);
+}
+
+.rrt-icon.icon-count {
+    background-image: url(../../asserts/icons/amount.svg);
+}
+
+.rrt-icon.icon-coins {
+    background-image: url(../../asserts/icons/price.svg);
+}
+
+.rrt-icon.icon-email {
+    background-image: url(../../asserts/icons/price.svg);
+}
+
+.rrt-icon.icon-search {
+    background-image: url(../../asserts/icons/search.svg);
+}
+
+/*
+    菜单的按钮
+*/
+
+.rrt-icon.icon-menu-home {
+    background-image: url(../../asserts/icons/home.svg);
+}
+
+.rrt-icon.icon-menu-home-gray {
+    background-image: url(../../asserts/icons/home_gray.svg);
+}
+
+.rrt-icon.icon-menu-ranking {
+    background-image: url(../../asserts/icons/ranking.svg);
+}
+
+.rrt-icon.icon-menu-ranking-gray {
+    background-image: url(../../asserts/icons/ranking_gray.svg);
+}
+
+.rrt-icon.icon-menu-artist {
+    background-image: url(../../asserts/icons/Artist.svg);
+}
+
+.rrt-icon.icon-menu-artist-gray {
+    background-image: url(../../asserts/icons/Artist_gray.svg);
+}
+
+.rrt-icon.icon-menu-post {
+    background-image: url(../../asserts/icons/post.svg);
+}
+
+.rrt-icon.icon-menu-post-gray {
+    background-image: url(../../asserts/icons/post_gray.svg);
+}
+
+.rrt-icon.icon-menu-mine {
+    background-image: url(../../asserts/icons/mine.svg);
+}
+
+.rrt-icon.icon-menu-mine-gray {
+    background-image: url(../../asserts/icons/mine_gray.svg);
+}
+
+.rrt-icon.icon-menu-qaa {
+    background-image: url(../../asserts/icons/Q&A.svg);
+}
+
+.rrt-icon.icon-menu-qaa-gray {
+    background-image: url(../../asserts/icons/Q&A_gray.svg);
+}
+
+.rrt-icon.icon-menu-like {
+    background-image: url(../../asserts/icons/like.svg);
+}
+
+.rrt-icon.icon-menu-like-gray {
+    background-image: url(../../asserts/icons/like_gray.svg);
+}
+
+.rrt-icon.icon-menu-talk {
+    background-image: url(../../asserts/icons/talk.svg);
+}
+
+.rrt-icon.icon-menu-talk-gray {
+    background-image: url(../../asserts/icons/talk_gray.svg);
+}
+
+.rrt-icon.icon-bell {
+    background-image: url(../../asserts/icons/bell.svg);
+}
+
+.rrt-icon.icon-global {
+    background-image: url(../../asserts/icons/global_language.svg);
+}
+
+.rrt-icon.icon-wallet {
+    background-image: url(../../asserts/icons/wallet_head.svg);
+}
+
+/*
+    菜单的按钮
+*/
+
+.rrt-icon.icon-small {
+    width: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    height: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+}
+
+/*移动端时使用的样式:竖屏样式*/
+@media (orientation: portrait) {
+    .rrt-icon.icon-small {
+        width: 2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+        height: 2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+    }
+}

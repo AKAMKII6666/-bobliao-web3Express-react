@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组备份</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="表单" transform="translate(-675.000000, -249.000000)">
+            <g id="编组备份" transform="translate(675.000000, 249.000000)">
+                <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+                <circle id="椭圆形" stroke-opacity="0.404185902" stroke="#11142D" stroke-width="1.5" cx="10" cy="10" r="9.25"></circle>
+                <circle id="椭圆形备份-2" stroke-opacity="0.404185902" stroke="#11142D" stroke-width="1.5" cx="10" cy="10" r="3.25"></circle>
+                <path d="M7.59952699,4.12730865 C6.00215215,4.85550954 4.72647611,6.16664177 4.04438786,7.78881637" id="路径" stroke-opacity="0.404185902" stroke="#11142D" stroke-width="1.5" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

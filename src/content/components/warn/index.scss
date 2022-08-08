@@ -1,0 +1,161 @@
+.rrt-warn{
+    overflow: hidden;
+    text-align: left;
+
+    .rrt-warnTitle{
+        overflow: hidden;
+        line-height: 2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+
+        span,label{
+            display: block;
+            float: left;
+        }
+
+        span{
+            height:2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+            width:2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(./icons/wallet.svg);
+            margin-right:1.42857142857143rem /* 20px -> 1.42857142857143rem */ ;
+        }
+
+        span.icon-wallet{
+            background-image: url(./icons/wallet.svg);
+        }
+        span.icon-link{
+            background-image: url(./icons/link.svg);
+        }
+        span.icon-global{
+            background-image: url(./icons/global.svg);
+        }
+        span.icon-person{
+            background-image: url(./icons/person.svg);
+        }
+        span.icon-none{
+            background-image:none;
+        }
+        span.icon-successed{
+            background-image: url(./icons/w_t.svg);
+        }
+         span.icon-error{
+            background-image: url(./icons/w_f.svg);
+        }
+        span.icon-warn{
+            background-image: url(./icons/w_a.svg);
+        }
+
+        label{
+            font-size: 1.71428571428571rem /* 24px -> 1.71428571428571rem */;
+            color:#11142D;
+            height:2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+            line-height: 2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+        }
+    }
+
+    .rrt-warnContainer{
+        height: auto;
+        line-height: 3.14285714285714rem /* 44px -> 3.14285714285714rem */;
+        font-size: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+        color:#808191;
+        text-indent: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+        max-width: 40.4285714286rem;
+        overflow: hidden;
+    }
+
+    .rrt-warnBtnContainer{
+        overflow: hidden;
+        padding: .57142857142857rem /* 8px -> .57142857142857rem */ 0px;
+        padding-left: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+        
+    }
+}
+
+.rrt-warn.type-small{
+    min-width: 35.71428571428572rem /* 500px -> 35.71428571428572rem */;
+    .rrt-warnTitle{
+        line-height: 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+        span{
+            height:2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+            width:2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+            margin-right:.71428571428571rem /* 10px -> .71428571428571rem */ ;
+        }
+        label{
+            font-size: 1.57142857142857rem /* 22px -> 1.57142857142857rem */;
+            line-height: 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+            height: 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+        }
+    }
+    .rrt-warnContainer{
+        height: auto;
+        line-height: 3.64285714285714rem /* 51px -> 3.64285714285714rem */;
+        font-size: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+        color:#808191;
+        text-indent: 2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+    }
+    .rrt-warnBtnContainer{
+        overflow: hidden;
+        padding-left: 2.85714285714286rem /* 40px -> 2.85714285714286rem */;
+    }
+}
+
+@media (orientation: portrait ){
+    .rrt-warn{
+        .rrt-warnTitle{
+            line-height: 2.85714285714286rem * 1.62 /* 40px -> 2.85714285714286rem */;
+            span{
+                height:2.85714285714286rem * 1.62 /* 40px -> 2.85714285714286rem */;
+                width:2.85714285714286rem * 1.62 /* 40px -> 2.85714285714286rem */;
+                margin-right:1.42857142857143rem * 1.62 /* 20px -> 1.42857142857143rem */ ;
+            }
+    
+
+            label{
+                font-size: 1.71428571428571rem * 1.62 /* 24px -> 1.71428571428571rem */;
+                height:2.85714285714286rem * 1.62 /* 40px -> 2.85714285714286rem */;
+                line-height: 2.85714285714286rem * 1.62 /* 40px -> 2.85714285714286rem */;
+            }
+        }
+    
+        .rrt-warnContainer{
+            height: auto;
+            line-height: 3.14285714285714rem * 1.62/* 44px -> 3.14285714285714rem */;
+            font-size: 1.42857142857143rem * 1.62/* 20px -> 1.42857142857143rem */;
+            text-indent: 4.28571428571429rem * 1.62/* 60px -> 4.28571428571429rem */;
+        }
+    
+        .rrt-warnBtnContainer{
+            padding: .57142857142857rem * 1.62/* 8px -> .57142857142857rem */ 0px;
+            padding-left: 4.28571428571429rem * 1.62/* 60px -> 4.28571428571429rem */;
+        }
+    }
+
+    .rrt-warn.type-small{
+        min-width: 21.42857142857143rem* 1.62 /* 300px -> 21.42857142857143rem */;
+        .rrt-warnTitle{
+            line-height: 1.42857142857143rem* 1.62 /* 20px -> 1.42857142857143rem */;
+            span{
+                height:1.42857142857143rem* 1.9 /* 20px -> 1.42857142857143rem */;;
+                width:1.42857142857143rem * 1.9/* 20px -> 1.42857142857143rem */;;
+                margin-right:.71428571428571rem /* 10px -> .71428571428571rem */ ;
+            }
+            label{
+                font-size:1.28571428571429rem* 1.62 /* 18px -> 1.28571428571429rem */;
+                line-height: 1.42857142857143rem* 1.62 /* 20px -> 1.42857142857143rem */;
+                height: 1.42857142857143rem* 1.62 /* 20px -> 1.42857142857143rem */;
+            }
+        }
+        .rrt-warnContainer{
+            height: auto;
+            line-height: 2.85714285714286rem* 1.62 /* 40px -> 2.85714285714286rem */;
+            font-size: 1.14285714285714rem* 1.62 /* 16px -> 1.14285714285714rem */;
+            color:#808191;
+            text-indent: 2.85714285714286rem* 1.62 /* 40px -> 2.85714285714286rem */;
+        }
+        .rrt-warnBtnContainer{
+            overflow: hidden;
+            padding-left: 2.85714285714286rem* 1.62 /* 40px -> 2.85714285714286rem */;
+        }
+    }
+}

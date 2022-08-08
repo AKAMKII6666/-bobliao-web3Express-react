@@ -1,0 +1,103 @@
+.rrt_button{
+    line-height: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+    padding:0px 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+    background-color: #FD5E00;
+    color: #fff;
+    text-align: center;
+    border-radius: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    display: inline-block;
+    transition: all .5s;
+    font-size: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.rrtb-size-large:hover{
+    transform: scale(1.1);
+}   
+
+.rrt_button:active{
+    transform: scale(0.9);
+}
+
+.rrtb-size-large{
+    font-size: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    padding:0px 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+    line-height: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+    border-radius: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+}
+
+.rrtb-size-mid{
+    font-size: .85714285714286rem /* 12px -> .85714285714286rem */;
+    padding:0px 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    line-height: 3.14285714285714rem /* 44px -> 3.14285714285714rem */;
+    border-radius: .71428571428571rem /* 10px -> .71428571428571rem */;
+}
+
+.rrtb-size-small{
+    font-size: .85714285714286rem /* 12px -> .85714285714286rem */;
+    padding:0px 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    line-height: 2rem /* 28px -> 2rem */;
+    border-radius: .71428571428571rem /* 10px -> .71428571428571rem */;
+}
+  
+.rrtb-color-white{
+    border: 0.07142857142857rem /* 1px -> 0.07142857142857rem */ solid rgba(128,129,145,0.5);
+    background: #fff;
+    color: #808191;
+}
+
+.rrtb-size-large.rrtb-color-white{
+    line-height: 4.14285714285714rem /* 58px -> 4.14285714285714r em */;
+} 
+ 
+.rrtb-size-mid.rrtb-color-white{    
+    line-height:3rem /* 42px -> 3rem */;
+} 
+
+.rrtb-size-small.rrtb-color-white{  
+    line-height: 1.85714285714286rem /* 26px -> 1.85714285714286rem */; 
+}
+
+.rrtb-size-orange{
+    background:linear-gradient(0deg,#FE7200 0,#FC4300 100%)
+}
+
+.rrtb-size-gray{
+    background:#808191;
+    color:#fff;
+}
+
+.rrtb-state-enabled{
+    cursor: pointer;
+}
+
+.rrtb-state-disabled{
+    cursor:not-allowed;
+    opacity: 0.3;
+}
+
+/*移动端时使用的样式:竖屏样式*/
+@media (orientation: portrait ){
+
+    .rrtb-size-large{
+        font-size: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+        padding:0px 2.14285714285714rem /* 30px -> 2.14285714285714rem */;
+        line-height: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+        border-radius: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+    }
+
+    .rrtb-size-mid{
+        font-size: 1.14285714285714rem /* 16px -> 1.14285714285714rem */;
+        padding:0px 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+        line-height: 3.14285714285714rem /* 44px -> 3.14285714285714rem */;
+        border-radius: .71428571428571rem /* 10px -> .71428571428571rem */;
+    }
+
+    .rrtb-size-small{
+        font-size: .85714285714286rem *1.9 /* 12px -> .85714285714286rem */;
+        padding:0px 1.42857142857143rem *1.9 /* 20px -> 1.42857142857143rem */;
+        line-height: 2rem  *1.9/* 28px -> 2rem */;
+        border-radius: .71428571428571rem  *1.9/* 10px -> .71428571428571rem */;
+    }
+}

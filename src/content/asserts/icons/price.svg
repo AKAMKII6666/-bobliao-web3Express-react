@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>price</title>
+    <g id="设计规范" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC端" transform="translate(-390.000000, -2727.000000)">
+            <g id="price" transform="translate(390.000000, 2727.000000)">
+                <g id="date备份-6">
+                    <rect id="矩形" x="0" y="0" width="20" height="20"></rect>
+                </g>
+                <ellipse id="椭圆形" stroke-opacity="0.401534501" stroke="#11142D" stroke-width="2" cx="10" cy="4" rx="9" ry="3"></ellipse>
+                <path d="M1.2877225,8.24316425 C1.09992784,8.53277088 1,8.83653767 1,9.14964022 C1,11.1378653 5.02943725,12.7496402 10,12.7496402 C14.9705627,12.7496402 19,11.1378653 19,9.14964022 C19,8.84011469 18.9023424,8.53971282 18.7186794,8.25309556" id="路径" stroke-opacity="0.401534501" stroke="#11142D" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M1.2877225,14.2431643 C1.09992784,14.5327709 1,14.8365377 1,15.1496402 C1,17.1378653 5.02943725,18.7496402 10,18.7496402 C14.9705627,18.7496402 19,17.1378653 19,15.1496402 C19,14.8401147 18.9023424,14.5397128 18.7186794,14.2530956" id="路径备份-2" stroke-opacity="0.401534501" stroke="#11142D" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
