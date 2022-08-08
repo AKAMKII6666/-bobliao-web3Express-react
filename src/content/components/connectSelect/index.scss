@@ -1,137 +1,137 @@
 .rrt_connectSelect {
-    overflow: hidden;
-    padding: 0.71428571428571rem /* 10px -> .71428571428571rem */;
-    .rrt_connectSelect_item {
-        padding: 0.71428571428571rem /* 10px -> .71428571428571rem */ 1.42857142857143rem
-            /* 20px -> 1.42857142857143rem */;
-        padding-left: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
-        font-size: 1.28571428571429rem /* 18px -> 1.28571428571429rem */;
-        background-repeat: no-repeat;
-        background-size: 2.14285714285714rem /* 30px -> 2.14285714285714rem */ 2.14285714285714rem
-            /* 30px -> 2.14285714285714rem */;
-        background-position: 1.07142857142857rem /* 15px -> 1.07142857142857rem */ center;
-        border-top: 0.07142857142857rem /* 1px -> .07142857142857rem */ solid #d3d3d3;
-        transition: all 0.3s;
-        cursor: pointer;
-    }
+	overflow: hidden;
+	padding: 0.71428571428571rem /* 10px -> .71428571428571rem */;
+	.rrt_connectSelect_item {
+		padding: 0.71428571428571rem /* 10px -> .71428571428571rem */ 1.42857142857143rem
+			/* 20px -> 1.42857142857143rem */;
+		padding-left: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+		font-size: 1.28571428571429rem /* 18px -> 1.28571428571429rem */;
+		background-repeat: no-repeat;
+		background-size: 2.14285714285714rem /* 30px -> 2.14285714285714rem */ 2.14285714285714rem
+			/* 30px -> 2.14285714285714rem */;
+		background-position: 1.07142857142857rem /* 15px -> 1.07142857142857rem */ center;
+		border-top: 0.07142857142857rem /* 1px -> .07142857142857rem */ solid #d3d3d3;
+		transition: all 0.3s;
+		cursor: pointer;
+	}
 
-    .rrt_connectSelect_item:nth-child(1) {
-        border-top: 0px;
-    }
+	.rrt_connectSelect_item:nth-child(1) {
+		border-top: 0px;
+	}
 
-    .rrt_connectSelect_item:hover {
-        background-color: #d5f5f4;
-        background-size: 2.35714285714286rem /* 33px -> 2.35714285714286rem */ 2.35714285714286rem
-            /* 33px -> 2.35714285714286rem */;
-    }
+	.rrt_connectSelect_item:hover {
+		background-color: #d5f5f4;
+		background-size: 2.35714285714286rem /* 33px -> 2.35714285714286rem */ 2.35714285714286rem
+			/* 33px -> 2.35714285714286rem */;
+	}
 
-    .rrt_connectSelect_item:active {
-        background-color: #c3dfde;
-        background-size: 2.07142857142857rem /* 29px -> 2.07142857142857rem */ 2.07142857142857rem
-            /* 29px -> 2.07142857142857rem */;
-    }
+	.rrt_connectSelect_item:active {
+		background-color: #c3dfde;
+		background-size: 2.07142857142857rem /* 29px -> 2.07142857142857rem */ 2.07142857142857rem
+			/* 29px -> 2.07142857142857rem */;
+	}
 
-    .disConnect {
-        background-image: url(../../asserts/icons/w_f.svg);
-    }
+	.disConnect {
+		background-image: url(../../asserts/icons/w_f.svg);
+	}
 
-    .localWallet {
-        background-image: url(../../asserts/icons/metamask_fox.svg);
-    }
+	.localWallet {
+		background-image: url(../../asserts/icons/metamask_fox.svg);
+	}
 
-    .connectWallet {
-        background-image: url(../../asserts/icons/walletconnect_circle_blue.svg);
-    }
+	.connectWallet {
+		background-image: url(../../asserts/icons/walletconnect_circle_blue.svg);
+	}
 }
 
 .rrt_connectSelect_window {
-    padding: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
-    span,
-    label {
-        display: inline-block;
-        width: 100%;
-        height: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
-        line-height: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
-        border: 0.07142857142857rem /* 1px -> .07142857142857rem */ solid #d3d3d3;
-        border-radius: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
-        background-repeat: no-repeat;
-        background-size: 2.14285714285714rem /* 30px -> 2.14285714285714rem */ 2.14285714285714rem
-            /* 30px -> 2.14285714285714rem */;
-        background-position: 1.07142857142857rem /* 15px -> 1.07142857142857rem */ center;
-        transition: all 0.3s;
-        cursor: pointer;
-    }
+	padding: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+	span,
+	label {
+		display: inline-block;
+		width: 100%;
+		height: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+		line-height: 4.28571428571429rem /* 60px -> 4.28571428571429rem */;
+		border: 0.07142857142857rem /* 1px -> .07142857142857rem */ solid #d3d3d3;
+		border-radius: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+		background-repeat: no-repeat;
+		background-size: 2.14285714285714rem /* 30px -> 2.14285714285714rem */ 2.14285714285714rem
+			/* 30px -> 2.14285714285714rem */;
+		background-position: 1.07142857142857rem /* 15px -> 1.07142857142857rem */ center;
+		transition: all 0.3s;
+		cursor: pointer;
+	}
 
-    span {
-        background-image: url(../../asserts/icons/metamask_fox.svg);
-    }
+	span {
+		background-image: url(../../asserts/icons/metamask_fox.svg);
+	}
 
-    label {
-        background-image: url(../../asserts/icons/walletconnect_circle_blue.svg);
-        margin-top: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
-    }
+	label {
+		background-image: url(../../asserts/icons/walletconnect_circle_blue.svg);
+		margin-top: 1.42857142857143rem /* 20px -> 1.42857142857143rem */;
+	}
 
-    .disConnect {
-        background-image: url(../../asserts/icons/w_f.svg);
-    }
+	.disConnect {
+		background-image: url(../../asserts/icons/w_f.svg);
+	}
 
-    label:hover,
-    span:hover {
-        background-color: #d5f5f4;
-        background-size: 2.35714285714286rem /* 33px -> 2.35714285714286rem */ 2.35714285714286rem
-            /* 33px -> 2.35714285714286rem */;
-    }
+	label:hover,
+	span:hover {
+		background-color: #d5f5f4;
+		background-size: 2.35714285714286rem /* 33px -> 2.35714285714286rem */ 2.35714285714286rem
+			/* 33px -> 2.35714285714286rem */;
+	}
 
-    label:active,
-    span:active {
-        background-color: #c3dfde;
-        background-size: 2.07142857142857rem /* 29px -> 2.07142857142857rem */ 2.07142857142857rem
-            /* 29px -> 2.07142857142857rem */;
-    }
+	label:active,
+	span:active {
+		background-color: #c3dfde;
+		background-size: 2.07142857142857rem /* 29px -> 2.07142857142857rem */ 2.07142857142857rem
+			/* 29px -> 2.07142857142857rem */;
+	}
 }
 
 /*移动端时使用的样式:竖屏样式*/
 @media (orientation: portrait) {
-    .rrt_connectSelect_window {
-        padding: 1.42857142857143rem * 1.62 /* 20px -> 1.42857142857143rem */;
-        span,
-        label {
-            height: 4.28571428571429rem * 1.62 /* 60px -> 4.28571428571429rem */;
-            line-height: 4.28571428571429rem * 1.62 /* 60px -> 4.28571428571429rem */;
-            border: 0.07142857142857rem * 1.62 /* 1px -> .07142857142857rem */ solid #d3d3d3;
-            border-radius: 1.42857142857143rem * 1.62 /* 20px -> 1.42857142857143rem */;
-            background-size: 2.14285714285714rem * 1.62 /* 30px -> 2.14285714285714rem */ 2.14285714285714rem * 1.62
-                /* 30px -> 2.14285714285714rem */;
-            background-position: 1.07142857142857rem * 1.62 /* 15px -> 1.07142857142857rem */ center;
-            text-align: center;
-        }
+	.rrt_connectSelect_window {
+		padding: 1.42857142857143rem * 1.62 /* 20px -> 1.42857142857143rem */;
+		span,
+		label {
+			height: 4.28571428571429rem * 1.62 /* 60px -> 4.28571428571429rem */;
+			line-height: 4.28571428571429rem * 1.62 /* 60px -> 4.28571428571429rem */;
+			border: 0.07142857142857rem * 1.62 /* 1px -> .07142857142857rem */ solid #d3d3d3;
+			border-radius: 1.42857142857143rem * 1.62 /* 20px -> 1.42857142857143rem */;
+			background-size: 2.14285714285714rem * 1.62 /* 30px -> 2.14285714285714rem */
+				2.14285714285714rem * 1.62 /* 30px -> 2.14285714285714rem */;
+			background-position: 1.07142857142857rem * 1.62 /* 15px -> 1.07142857142857rem */ center;
+			text-align: center;
+		}
 
-        label {
-            margin-top: 1.42857142857143rem * 1.62 /* 20px -> 1.42857142857143rem */;
-        }
+		label {
+			margin-top: 1.42857142857143rem * 1.62 /* 20px -> 1.42857142857143rem */;
+		}
 
-        label:hover,
-        span:hover {
-            background-size: 2.35714285714286rem * 1.62 /* 33px -> 2.35714285714286rem */ 2.35714285714286rem * 1.62
-                /* 33px -> 2.35714285714286rem */;
-        }
+		label:hover,
+		span:hover {
+			background-size: 2.35714285714286rem * 1.62 /* 33px -> 2.35714285714286rem */
+				2.35714285714286rem * 1.62 /* 33px -> 2.35714285714286rem */;
+		}
 
-        label:active,
-        span:active {
-            background-size: 2.07142857142857rem * 1.62 /* 29px -> 2.07142857142857rem */ 2.07142857142857rem * 1.62
-                /* 29px -> 2.07142857142857rem */;
-        }
-    }
+		label:active,
+		span:active {
+			background-size: 2.07142857142857rem * 1.62 /* 29px -> 2.07142857142857rem */
+				2.07142857142857rem * 1.62 /* 29px -> 2.07142857142857rem */;
+		}
+	}
 
-    .kPopup_connSelect {
-        * {
-            font-size: 1.7857rem;
-        }
-        .rrt_connectSelect {
-            .rrt_connectSelect_item {
-                font-size: 1.7857rem;
-                width: 35.7143rem;
-            }
-        }
-    }
+	.kPopup_connSelect {
+		* {
+			font-size: 1.7857rem;
+		}
+		.rrt_connectSelect {
+			.rrt_connectSelect_item {
+				font-size: 1.7857rem;
+				width: 35.7143rem;
+			}
+		}
+	}
 }
