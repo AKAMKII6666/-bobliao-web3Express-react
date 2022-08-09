@@ -4,27 +4,37 @@
 /**
  * 钱包状态警告钩子
  */
-import * as warnBlockChainHook from "./content/publicHooks/warnBlockChainHook";
+import warnBlockChainHook from "./content/publicHooks/warnBlockChainHook";
 /**
  * 钱包操作器钩子
  */
-import * as walletHelperHook from "./content/publicHooks/walletHelperHook";
+import walletContext, {
+	//创建钱包操作器的函数
+	useWallet,
+	//在子组件中,获取钱包操作器的钩子函数
+	useWalletContext,
+} from "./content/publicHooks/walletHelperHook";
 /**
  * 用于签名登录的钩子
  */
-import * as signInHook from "./content/publicHooks/signInHook";
+import useSign from "./content/publicHooks/signInHook";
 /**
  * 公共函数钩子
  */
-import * as commonHook from "./content/publicHooks/commonHook";
+import commonContext, {
+	//创建context的函数
+	useCommon,
+	//在子组件中,获取context的钩子函数
+	useCommonContext,
+} from "./content/publicHooks/commonHook";
 /**
  * 合约操作器钩子
  */
-import * as mmOperatorHook from "./content/publicHooks/blockChanOperator/mmOperatorHook";
+import useMmOperator from "./content/publicHooks/blockChanOperator/mmOperatorHook";
 /**
  * ajax钩子
  */
-import * as ajaxHook from "./content/publicHooks/ajaxHook";
+import useAjax from "./content/publicHooks/ajaxHook";
 
 /**
  * 导出组件
@@ -71,13 +81,17 @@ import * as IsignIn from "./content/publicHooks/interfaces/iSignIn";
  */
 import * as IwalletHelper from "./content/publicHooks/interfaces/iWalletHelper";
 
-const exp = {
-	walletHelperHook,
+export default {
+	commonContext,
 	warnBlockChainHook,
-	signInHook,
-	commonHook,
-	mmOperatorHook,
-	ajaxHook,
+	walletContext,
+	useWallet,
+	useWalletContext,
+	useSign,
+	useCommon,
+	useCommonContext,
+	useMmOperator,
+	useAjax,
 	ConnectSelect,
 	WalletStatusDebugPanel,
 	Warn,
@@ -88,5 +102,3 @@ const exp = {
 	IsignIn,
 	IwalletHelper,
 };
-
-export default exp;

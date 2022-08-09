@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 用于将组
 
 const prodConfig = {
 	mode: "production", // 生产模式
-	entry: path.join(__dirname, "../src/index.tsx"),
+	entry: path.join(__dirname, "../src/index.ts"),
 	output: {
 		path: path.join(__dirname, "../lib/"),
 		filename: "index.js",

@@ -1,35 +1,15 @@
 /*** examples/src/app.js ***/
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
-import Web3ReactExpress from "../../lib/index"; // 引入组件
+import web3express from "../../lib/index"; // 引入组件
+const { walletContext, useWallet, commonContext, useCommon, Button } = web3express;
 import ExcOne from "./excOne";
 
 const App = () => {
-	const {
-		walletHelperHook,
-		warnBlockChainHook,
-		signInHook,
-		commonHook,
-		mmOperatorHook,
-		ajaxHook,
-		ConnectSelect,
-		WalletStatusDebugPanel,
-		Warn,
-		Button,
-		Iajax,
-		Icomon,
-		ImmOperator,
-		IsignIn,
-		IwalletHelper,
-	} = Web3ReactExpress;
-
-	const commonContext = commonHook.default;
-	const walletContext = walletHelperHook.default;
-
 	//初始化commonHook
-	const commonObject = commonHook.useCommon("development");
+	const commonObject = useCommon("development");
 	//初始化钱包操作器
-	const walletHalper = walletHelperHook.useWallet(false, "development");
+	const walletHalper = useWallet(false, "development");
 
 	return (
 		<>

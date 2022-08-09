@@ -1,11 +1,10 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import Web3Express from "../../lib/index";
+import web3express from "../../lib/index";
+const { ConnectSelect } = web3express;
 
 const ExcOne = () => {
 	const [isMounted, setIsmounted] = useState(false);
-
-	const { ConnectSelect } = Web3Express;
 
 	useEffect(
 		function () {
