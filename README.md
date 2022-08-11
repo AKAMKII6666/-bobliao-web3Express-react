@@ -1020,7 +1020,152 @@ export default ExcTwo;
 							console.log(result);
 						}
 ```
+### 完整示例
 
+```javascript
+import React, { useEffect } from "react";
+import { useState } from "react";
+import Web3Express from "@bobliao/web3-express-react";
+import "./index.css";
+const defaultConfig = require("../../../blockChanOperator/contractConfigs/default.config").contractConfig;
+
+const ExcTwo = () => {
+	const [isMounted, setIsmounted] = useState(false);
+
+	//使用Web3Express导出useWalletContext
+	const { useWalletContext, ConnectSelect, useMmOperator, useCommon } = Web3Express;
+	//使用useWalletContext导出walletHelper
+	const walletHelper = useWalletContext();
+	//walletHelper包含两个对象
+	//一个是walletData 另一个是walletFuncs
+	const { walletData } = walletHelper;
+
+	//创建合约操作器
+	const contractOperator = useMmOperator(defaultConfig);
+
+	//导出公用函数集
+	const commonObj = useCommon();
+
+	useEffect(
+		function () {
+			if (contractOperator.data.isLoaded) {
+				console.log("合约都已经载入完成，可以开始合约操作！");
+
+				(async function () {
+					let amount = await contractOperator.data.contracts.BuyStockNFT.methods
+						.buyCount()
+						.call();
+					console.log(amount);
+				})();
+			}
+		},
+		[contractOperator.data.changeTimes]
+	);
+
+	useEffect(
+		function () {
+			console.log("您的钱包地址为:" + walletData.currentAccount);
+		},
+		[walletData.currentAccount]
+	);
+
+	useEffect(
+		function () {
+			if (!isMounted) {
+				setIsmounted(true);
+			}
+
+			return function () {
+				if (isMounted) {
+					setIsmounted(false);
+				}
+			};
+		},
+		[isMounted]
+	);
+
+	return (
+		<div>
+			<ConnectSelect mode="window">
+				<button>使用窗口弹出链接选择菜单</button>
+			</ConnectSelect>
+
+			<button
+				onClick={function () {
+					(async function () {
+						/**
+						 * 确保合约都载入完成
+						 */
+						if (contractOperator.data.isLoaded) {
+							/**
+							 * contractOperator.funcs.send函数，参数释意：
+							 * 第一个参数为合约名称
+							 * 第二个参数为方法名称
+							 * 第三个参数为提供给方法的参数，没有就填写空数组
+							 * 第四个参数为提交时必须要填写的参数集
+							 */
+							let result = await contractOperator.funcs.send(
+								"BuyStockNFT",
+								"buyMidNFT",
+								[],
+								{
+									//使用钱包的账号，如果未链接钱包即walletData.currentAccount = "",应该给出提示
+									from: walletData.currentAccount,
+									//这里是向这个“buyMidNFT”发起一个数额为0.001Matic的交易，由于Matic的缩进为18位，需要使用commonObj.shiftNumber来对数字进行缩进
+									//直接向这里发起交易时输入浮点数将报错。
+									value: commonObj.commonFuncs.shiftNumber(
+										0.001,
+										-18
+									),
+								}
+							);
+
+							console.log(result);
+						}
+					})();
+				}}
+			>
+				发起交易
+			</button>
+
+			<button
+				onClick={function () {
+					(async function () {
+						/**
+						 * 确保合约都载入完成
+						 */
+						if (contractOperator.data.isLoaded) {
+							let result =
+								await contractOperator.data.contracts.BuyStockNFT.methods
+									.buyMidNFT()
+									.send({
+										//使用钱包的账号，如果未链接钱包即walletData.currentAccount = "",应该给出提示
+										from: walletData.currentAccount,
+										//这里是向这个“buyMidNFT”发起一个数额为0.001Matic的交易，由于Matic的缩进为18位，需要使用commonObj.shiftNumber来对数字进行缩进
+										//直接向这里发起交易时输入浮点数将报错。
+										value: commonObj.commonFuncs.shiftNumber(
+											0.001,
+											-18
+										),
+									});
+							console.log(result);
+						}
+					})();
+				}}
+			>
+				发起交易传统方式
+			</button>
+
+			<div>
+				当前登陆的钱包账号:
+				{walletData.currentAccount}
+			</div>
+		</div>
+	);
+};
+export default ExcTwo;
+
+```
 ### 未完待续
 
 
