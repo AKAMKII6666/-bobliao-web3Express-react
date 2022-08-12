@@ -1346,7 +1346,19 @@ if (result.status === "ERROR") {
 	});
 }
 ```
+### 未完待续
 
+
+-------------------------------------------------------------
+感谢您的阅读
+Thank you to check this out
+英文文档和视频解说正在筹划中，敬请期待。
+English version and viedo explanation is comming soon.
+任何问题或交流请联系：
+Contact:
+liaoli66@gmail.com
+Telegram group:
+https://t.me/+h1HY2q-G5ApmYjU1
 
 
 
