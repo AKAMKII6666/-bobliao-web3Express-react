@@ -1166,7 +1166,195 @@ const ExcTwo = () => {
 export default ExcTwo;
 
 ```
-### 未完待续
+# 使用web3Express内置的GUI完善您的应用体验
+### 使用web3Express.commonHook中内置的alt函数和ask函数:
+>您可以使用commonHook中提供的一些便捷的函数制作完成类似alert()或者window.confirm的体验，您的编码体验将会增强，用户的交互体验也会得到增强:
+
+### alt():弹出警告
+```javascript
+	import Web3Express from "@bobliao/web3-express-react";
+	
+	//使用Web3Express导出useCommon,useWalletContext
+	const { useCommon , useWalletContext} = Web3Express;
+	
+	//使用useWalletContext导出walletHelper
+	const walletHelper = useWalletContext();
+	
+	//walletHelper包含两个对象
+	//一个是walletData 另一个是walletFuncs
+	const { walletData } = walletHelper;
+	
+	//导出公用函数集
+	const { commonFuncs, alt, ask } = useCommon();
+	
+			<button
+				onClick={function () {
+					(async function () {
+						/**
+						 *检测用户钱包是否登录，未登录就警告用户登录
+						 */
+						if (walletData.currentAccount === "") {
+							alt({
+								message: "您没有登录钱包，请登录钱包再继续！",
+							});
+							
+							return;
+						}
+						
+						(...)
+						
+					})();
+				}}
+			>
+				发起交易
+			</button>
+	
+```
+![](https://raw.githubusercontent.com/AKAMKII6666/-bobliao-web3Express-react/main/excmpleImages/m_36620ba09146ccb713a07aa7e4b298a6_r.png)
+
+
+#### alt():判断用户点击了确认键还是关闭了窗口
+``` javascript
+/**
+ *检测用户钱包是否登录，未登录就警告用户登录
+*/
+if (walletData.currentAccount === "") {
+	/**
+	 * 打开窗口时接收一个返回的result对象
+	 * resultObj 包含两个东西
+	 * 一个是 promise 也就是处理窗口按钮点击返回的Promise
+	 * 一个是 window 就是窗口的控制对象
+	 */
+	let resultObj = alt({
+		message: "您没有登录钱包，请登录钱包再继续！",
+	});
+	/**
+	 * 通过 await resultObj.promise 来得到窗口按钮点击的返回值
+	 */
+	var buttonResult = await resultObj.promise;
+	/**
+	 * 将返回一个对象:
+	 *
+		{
+			"status":"NO/YES",
+			"data":{}
+		}
+		*/
+	if (buttonResult.status === "YES") {
+		console.log("点击了确认键");
+	}
+	if (buttonResult.status === "NO") {
+		console.log("点击了关闭");
+	}
+	debugger;
+	return;
+}
+```
+
+### ask():弹出询问：
+
+>和alt()的使用方法类似:
+
+```javascript
+/**
+ *检测用户钱包是否登录，未登录就警告用户登录
+	*/
+if (walletData.currentAccount === "") {
+	/**
+	 * 打开窗口时接收一个返回的result对象
+	 * resultObj 包含两个东西
+	 * 一个是 promise 也就是处理窗口按钮点击返回的Promise
+	 * 一个是 window 就是窗口的控制对象
+	 */
+	let resultObj = ask({
+		message: "您没有登录钱包，您需要登录钱包吗？",
+	});
+	/**
+	 * 通过 await resultObj.promise 来得到窗口按钮点击的返回值
+	 */
+	var buttonResult = await resultObj.promise;
+	/**
+	 * 将返回一个对象:
+	 *
+	{
+		"status":"NO/YES",
+		"data":{}
+	}
+	*/
+	if (buttonResult.status === "YES") {
+		walletFuncs.triggerConnect();
+	}
+	if (buttonResult.status === "NO") {
+		console.log("点击了取消键");
+	}
+	debugger;
+	return;
+}
+```
+
+![](https://raw.githubusercontent.com/AKAMKII6666/-bobliao-web3Express-react/main/excmpleImages/m_17991184128bf4aa68d5f2b9458a72da_r.png)
+
+
+### 利用contractOperator.funcs.send的返回值对交易状态进行处理:
+
+```javascript
+let resultPromise = contractOperator.funcs.send(
+	"BuyStockNFT",
+	"buyMidNFT",
+	[],
+	{
+		//使用钱包的账号，如果未链接钱包即walletData.currentAccount = "",应该给出提示
+		from: walletData.currentAccount,
+		//这里是向这个“buyMidNFT”发起一个数额为0.001Matic的交易，由于Matic的缩进为18位，需要使用commonObj.shiftNumber来对数字进行缩进
+		//直接向这里发起交易时输入浮点数将报错。
+		value: commonFuncs.shiftNumber(0.001, -18),
+	}
+);
+
+/*
+*等待返回结果
+*/
+let result = await resultPromise;
+
+/**
+ * 交易成功
+ */
+if (result.status === "SUCCESSED") {
+	alt({
+		title: "交易訊息",
+		message: "您已完成了交易",
+	});
+}
+
+/**
+ * 用户在metamask上点击了退出或者交易超时
+ */
+if (result.status === "USEREXIT") {
+	alt({
+		title: "交易訊息",
+		message: "您已取消了交易",
+	});
+}
+
+/**
+ * 因为网络原因引起的交易错误
+ */
+if (result.status === "ERROR") {
+	alt({
+		title: "交易訊息",
+		message: "交易失敗!請檢查您的網絡!",
+	});
+}
+```
+
+
+
+
+
+
+
+
+
 
 
 
