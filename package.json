@@ -1,6 +1,6 @@
 {
 	"name": "@bobliao/web3-express-react",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"description": "",
 	"main": "lib/index.js",
 	"repository": {
