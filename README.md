@@ -4,18 +4,18 @@
 # Web3 express react - Reference API  参考文档
 
 ## 组件亮点：
->1.通过简单地安装以及引用就可以快速配置一个React + web3js项目，从而避免在一开始配置环境时消耗大量的时间。
-2.可根据不同的运行环境（developement/production）配置不同的网络依赖，以及不同的合约。
-3.搭配专属工具可自动化快速更换项目中的合约以及配置，方便项目的开发和维护。
-4.自带Gui,可根据需要直接使用本组件的Gui快速完成web3交互。
-5.支持SSR，不需要担心Razzle和Nuxt的兼容性问题。
+>1.通过简单地安装以及引用就可以快速配置一个React + web3js项目，从而避免在一开始配置环境时消耗大量的时间。</br>
+2.可根据不同的运行环境（developement/production）配置不同的网络依赖，以及不同的合约。</br>
+3.搭配专属工具可自动化快速更换项目中的合约以及配置，方便项目的开发和维护。</br>
+4.自带Gui,可根据需要直接使用本组件的Gui快速完成web3交互。</br>
+5.支持SSR，不需要担心Razzle和Nuxt的兼容性问题。</br>
 
 ## 功能特性：
->1.开箱即用，只需一个函数即可完成钱包的安装和链接
-2.钱包状态管理功能齐全，可以通过导出的状态直接获得当前钱包是否登录，网络链接是否错误等。
-3.智能地网络管理，当Web3 express运行在未链接/安装钱包的的状态下时，Web3 express将会直接使用http节点的方式工作，当运行在有钱包链接的工作状态下时，会通过钱包对区块链进行交互，所有这一切都是自动的，无需手动判断和切换。
-4.支持walletConnect Deeplink
-5.多种简化封装方便您快速上手工作，并可避免人为失误。
+>1.开箱即用，只需一个函数即可完成钱包的安装和链接</br>
+2.钱包状态管理功能齐全，可以通过导出的状态直接获得当前钱包是否登录，网络链接是否错误等。</br>
+3.智能地网络管理，当Web3 express运行在未链接/安装钱包的的状态下时，Web3 express将会直接使用http节点的方式工作，当运行在有钱包链接的工作状态下时，会通过钱包对区块链进行交互，所有这一切都是自动的，无需手动判断和切换。</br>
+4.支持walletConnect Deeplink</br>
+5.多种简化封装方便您快速上手工作，并可避免人为失误。</br>
 
 # 安装组件
 
@@ -27,7 +27,7 @@
 
 
 # ======= 进行全局配置 =======
->进行全局配置将有效地使您的业务代码访问到Web3 express
+>进行全局配置将有效地使您的业务代码访问到Web3 express</br>
 以下配置请配置到您项目中的顶级模块中去，例如`App.js`
 
 
@@ -120,7 +120,7 @@ export default App;
 `https://stackoverflow.com/questions/41705888/passing-the-node-env-value-using-webpack-via-defineplugin`
 
 # =======安装钱包，链接钱包，及钱包状态的管理=======
->钱包的状态管理主要使用 WalletHelper 对象
+>钱包的状态管理主要使用 WalletHelper 对象</br>
 使用Web3Expres导出`useWalletContext`钩子，并使用`useWalletContext`钩子导出 `walletHelper` 对象
 
 #### 示例：
@@ -1346,7 +1346,48 @@ if (result.status === "ERROR") {
 	});
 }
 ```
-### 未完待续
+# commonHook导出内容一览:
+
+
+| 对象名称  |子对象   | 参数  | 返回  | 说明  |
+| ------------ | ------------ | ------------ |  ------------ | ------------ |
+|data|.isMounted|-| boolean | common对象是否已经挂载 |
+|data|.envTag|-|string|当前运行环境的字符 来自RUNNING_ENV 自定义环境变量,内容有 "production","gray","devlopment"|
+|data|.isRunningInServer|-|boolean|true表示当前代码在服务器上渲染中,false表示当前代码在客户机上运行|
+|commonFuncs|.setData|data = `{key:value}`|void|设置data里的内容|
+|commonFuncs|.findScrollNode| _parent = `jqueryObject` |`jqueryObject`|输入一个jquery对象,从这个对象开始往上查找第一个遇到的带有`scroll:auto`属性的节点并返回这个节点|
+|commonFuncs|.setCookie|`name: string, value: string, time: string or number`|void|设置cookie|
+|commonFuncs|.delCookie|`name: string`|void|删除cookie|
+|commonFuncs|.getCookie|`name: string`|` void or string`|获得cookie|
+|commonFuncs|.getAngle|`pt1: pointCoord, pt2: pointCoord`|number|根据两个坐标点 获取角度|
+|commonFuncs|.changeTextArea|`_e: jQueryObject`|void|当textArea更改的时候改变高度[react]|
+|commonFuncs|.getLength|`p1: pointCoord, p2: pointCoord`|number|获得两点之间的距离|
+|commonFuncs|.getRand|`Max: number, Min: number`|number|获得一个随机数|
+|commonFuncs|.thousandsSplit|`num: number`|string|千分位分割|
+|commonFuncs|.getUnitNumber|`_num: number, _lan: string, _fix: number`|string|通过语言信息获得单位换算|
+|commonFuncs|.getUrlParams|void|object|提取url参数|
+|commonFuncs|.isNumber|`_str: string | number`|boolean|判断是否为数字|
+|commonFuncs|.setUrlParam|`_key: string, _val: string`|void|设置url参数|
+|commonFuncs|.removeDuplicate|`array: Array<any>, callBack: Function`|`Array<any>`|去重算法|
+|commonFuncs|.newGuid|void|string|获得一个gui ID|
+|commonFuncs|.formatDate|`date: Date, format: string`|string|格式化时间|
+|commonFuncs|.getDayOfWeek|`_date: Date or string`|string|获得当前是周几|
+|commonFuncs|.getTimeOfDay|`_date: Date`or string|获得一天每个时间段的文字描述|
+|commonFuncs|.getColorOfDay|`_value: string`|string|获得一天中时间的的色彩|
+|commonFuncs|.dateAddDays|`dateStr: string, dayCount: number`|Date|增加天数|
+|commonFuncs|.dateMDays|`dateStr: string, dayCount: number`|Date|减去天数|
+|commonFuncs|.dateAddHours|`dateStr: string, HCount: number`|Date|增加小时|
+|commonFuncs|.dateMHours|`dateStr: string, HCount: number`|Date|减去小时|
+|commonFuncs|.isJsonObject|`_data: any`|boolean|判断是否为json对象|
+|commonFuncs|.shiftNumber|`_number: string or number, _shiftLength: number`|string|换算区块链的数字单位|
+|alt|-|`{title:string,message:string}`|any|弹出警告窗口|
+|ask|-|`{title:string,message:string}`|any|弹出询问窗口|
+|print|-|`message:string`|Function|用小气泡打印一行字|
+|popUp|-|`elements: ReactElement,time: number`|Promise|用小气泡打印react组件|
+|printAlt|-|`参考代码`|any|用小气泡打印待确定按钮的警告窗口|
+|printAsk|-|`参考代码`|any|用小气泡打印待确定/取消的询问窗口|
+|printWarn|-|`warnProps`|warnReturn|打印各类带图标的警告气泡|
+|warn|-|`warnProps`|warnReturn|弹出各类带图标的警告弹窗|
 
 
 -------------------------------------------------------------
@@ -1358,7 +1399,7 @@ English version and viedo explanation is comming soon.</br>
 Contact:</br>
 liaoli66@gmail.com</br>
 Telegram group:</br>
-https://t.me/+h1HY2q-G5ApmYjU1</br>
+https://t.me/+h1HY2q-G5ApmYjU1
 
 
 
