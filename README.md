@@ -1,3 +1,28 @@
+
+
+![](https://raw.githubusercontent.com/AKAMKII6666/-bobliao-web3Express-react/main/excmpleImages/1.png)
+
+-------------------------------------------------
+# English
+
+# Web3 express react - Reference API
+
+## introduction：
+>1.Make you create React + web3js projects fastly & simply。</br>
+2.Systematically helps you manage contracts or networks under developement or production environment of your project。</br>
+3.With a configing tool (Contract-config-setter) ,contracts and configurations in your project can be automatically and quickly replaced,it will make more easer and faster of maintaining your projects. </br>
+4.GUI-Built in，could use the GUI of this package built in,fast and easely make friendly web3 experience。</br>
+
+## Package features：
+>1.Out-of-the-box,can simply make wallet connect or install thow just a Function().</br>
+2.Can directly obtain whether the current wallet is logged in and whether the network link is wrong through the exported status from this package.。</br>
+3.Intelligent network management. When Web3 express is running in the state of unlinked but wallet installed, Web3 express will work under the mode of HTTP-Node. When it's running in the working state of wallet linked, it will interact with the blockchain through the wallet. All these are automatic, without manual judgment and switching.。</br>
+4.walletConnect package built in</br>
+
+
+-------------------------------------------------
+# 中文
+
 ![](https://raw.githubusercontent.com/AKAMKII6666/-bobliao-web3Express-react/main/excmpleImages/1.png)
 
 
@@ -1346,6 +1371,26 @@ if (result.status === "ERROR") {
 	});
 }
 ```
+
+### 利用switchCurrentNetWork将用户选错的网络切换到准确的网络
+
+>通过 `switchCurrentNetWork`可以将错误的网络切换到往前运行环境下我们在合约配置里配置好的网络
+
+```javascript
+	//使用这个判断是否为正确的网络（可使用effect监听）
+	contractOperator.data.isWrongNetWork; //ture:错误的网络  ,false:网络正常
+	
+	//使用这个唤出钱包自带的切换网络的界面，切换到项目需求的网络
+	contractOperator.funcs.switchCurrentNetWork();
+	
+	//使用案例
+	if(contractOperator.data.isWrongNetWork){
+		contractOperator.funcs.switchCurrentNetWork();
+	}
+```
+
+
+
 # commonHook导出内容一览:
 
 
@@ -1400,18 +1445,3 @@ Contact:</br>
 liaoli66@gmail.com</br>
 Telegram group:</br>
 https://t.me/+h1HY2q-G5ApmYjU1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
